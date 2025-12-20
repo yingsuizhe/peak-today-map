@@ -1,0 +1,297 @@
+{
+  "0": {
+    "id": "0",
+    "level1": {
+      "name": "海岸",
+      "remark": "更多蛇形岩石"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "黄色雨林, 更多炸弹球"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "古墓入口开放, 出口封闭"
+    }
+  },
+  "1": {
+    "level1": {
+      "name": "海岸",
+      "remark": "棕橙色沙子"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "默认雨林"
+    },
+    "level3": {
+      "name": "雪山",
+      "remark": "默认雪山"
+    }
+  },
+  "2": {
+    "level1": {
+      "name": "海岸",
+      "remark": "更多蛇形岩石"
+    },
+    "level2": {
+      "name": "林蕈",
+      "remark": "红衫林"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "更多龙卷风, 古墓出入口开放"
+    }
+  },
+  "3": {
+    "level1": {
+      "name": "海岸",
+      "remark": "默认"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "默认"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "更多风滚草, 古墓封闭"
+    }
+  },
+  "4": {
+    "level1": {
+      "name": "海岸",
+      "remark": "棕橙色沙子, 更多海胆"
+    },
+    "level2": {
+      "name": "林蕈",
+      "remark": "红衫林"
+    },
+    "level3": {
+      "name": "雪山",
+      "remark": "大量巨型冰刺"
+    }
+  },
+  "5": {
+    "level1": {
+      "name": "海岸",
+      "remark": "默认"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "默认"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "更多炸弹, 古墓封闭"
+    }
+  },
+  "6": {
+    "level1": {
+      "name": "海岸",
+      "remark": "大量水母"
+    },
+    "level2": {
+      "name": "林蕈",
+      "remark": "大量跳跳菇"
+    },
+    "level3": {
+      "name": "雪山",
+      "remark": "默认"
+    }
+  },
+  "7": {
+    "level1": {
+      "name": "海岸",
+      "remark": "默认"
+    },
+    "level2": {
+      "name": "林蕈",
+      "remark": "红衫林"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "古墓封闭"
+    }
+  },
+  "8": {
+    "level1": {
+      "name": "海岸",
+      "remark": "大量水母"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "默认"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "更多蝎子"
+    }
+  },
+  "9": {
+    "level1": {
+      "name": "海岸",
+      "remark": "棕红色沙子, 更多海胆"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "默认"
+    },
+    "level3": {
+      "name": "雪山",
+      "remark": "大量巨型冰刺"
+    }
+  },
+  "10": {
+    "level1": {
+      "name": "海岸",
+      "remark": "默认"
+    },
+    "level2": {
+      "name": "林蕈",
+      "remark": "更多巨型甲虫和炸弹球"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "更多炸弹, 古墓封闭"
+    }
+  },
+  "11": {
+    "level1": {
+      "name": "海岸",
+      "remark": "默认"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "更多藤曼柱子"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "古墓出入口开放"
+    }
+  },
+  "12": {
+    "level1": {
+      "name": "海岸",
+      "remark": "默认"
+    },
+    "level2": {
+      "name": "林蕈",
+      "remark": "大量弹跳菇"
+    },
+    "level3": {
+      "name": "雪山",
+      "remark": "默认"
+    }
+  },
+  "13": {
+    "level1": {
+      "name": "海岸",
+      "remark": "默认"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "默认"
+    },
+    "level3": {
+      "name": "雪山",
+      "remark": "默认"
+    }
+  },
+  "14": {
+    "level1": {
+      "name": "海岸",
+      "remark": "默认"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "默认"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "更多仙人掌, 古墓入口开放, 出口半封闭"
+    }
+  },
+  "15": {
+    "level1": {
+      "name": "海岸",
+      "remark": "棕红色沙子, 更多海胆"
+    },
+    "level2": {
+      "name": "林蕈",
+      "remark": "红衫林"
+    },
+    "level3": {
+      "name": "雪山",
+      "remark": "默认"
+    }
+  },
+  "16": {
+    "level1": {
+      "name": "海岸",
+      "remark": "大型蛇形岩石"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "更多藤曼柱子"
+    },
+    "level3": {
+      "name": "雪山",
+      "remark": "默认"
+    }
+  },
+  "17": {
+    "level1": {
+      "name": "海岸",
+      "remark": "默认"
+    },
+    "level2": {
+      "name": "雨林",
+      "remark": "更多藤曼柱子"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "更多炸药, 古墓封闭"
+    }
+  },
+  "18": {
+    "level1": {
+      "name": "海岸",
+      "remark": "默认"
+    },
+    "level2": {
+      "name": "林蕈",
+      "remark": "默认"
+    },
+    "level3": {
+      "name": "方山",
+      "remark": "更多龙卷风, 古墓封闭"
+    }
+  },
+  "19": {
+    "level1": {
+      "name": "海岸",
+      "remark": "大型蛇形岩石"
+    },
+    "level2": {
+      "name": "林蕈",
+      "remark": "红衫林"
+    },
+    "level3": {
+      "name": "雪山",
+      "remark": "默认"
+    }
+  },
+  "20": {
+    "level1": {
+      "name": "海岸",
+      "remark": "橙棕色沙子, 更多海胆"
+    },
+    "level2": {
+      "name": "林蕈",
+      "remark": "出现岩浆瀑布"
+    },
+    "level3": {
+      "name": "雪山",
+      "remark": "出现岩浆瀑布"
+    }
+  }
+}

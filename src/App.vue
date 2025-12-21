@@ -25,11 +25,18 @@ onBeforeMount(() => {
         // 计算秒
         const seconds = (59 - nowSeconds).toString().padStart(2, "0");
         countdown.value = `${hours}:${minutes}:${seconds}`;
+        if (countdown.value !== "00:00:00") {
+
+        }
     }, 1000);
 })
 
-const mapInfo = ref({})
-onBeforeMount(() => {
+// 地图数据
+const mapInfo = ref([])
+/**
+ * 计算当日是什么地图
+ */
+const calculateTodayMap = () => {
     // 初始地图和时间的对应
     const initMap = {"date": new Date("2025/12/17 01:00:00"), "id": 16};
     // 获取当日时间
@@ -40,17 +47,26 @@ onBeforeMount(() => {
     const rotationId = (days + initMap.id) % 21
     // 获取数据
     mapInfo.value = rotations[rotationId];
+}
+/**
+ * 在组件加载之前获取地图数据
+ */
+onBeforeMount(() => {
+    // 获取地图数据
+    calculateTodayMap()
 })
 </script>
 
 <template>
-    <p>距离刷新地图还有: {{ countdown }}</p>
-    <p>第一关: {{ mapInfo.level1.name }} {{ mapInfo.level1.remark }}</p>
-    <p>第二关: {{ mapInfo.level2.name }} {{ mapInfo.level2.remark }}</p>
-    <p>第三关: {{ mapInfo.level3.name }} {{ mapInfo.level3.remark }}</p>
-    <p>第四关: 火山</p>
-    <p>第五关: 熔炉</p>
-    <p>第六关: 顶峰</p>
+    <p>
+        <el-text>距离刷新地图还有:</el-text>
+        <el-text type="success"> {{ countdown }}</el-text>
+    </p>
+    <el-table :data="mapInfo">
+        <el-table-column label="关卡" prop="id"></el-table-column>
+        <el-table-column label="地形" prop="name"></el-table-column>
+        <el-table-column label="备注" prop="remark"></el-table-column>
+    </el-table>
 </template>
 
 <style scoped>

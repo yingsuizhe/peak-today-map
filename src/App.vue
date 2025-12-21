@@ -3,20 +3,27 @@ import {ref, onBeforeMount} from "vue";
 import rotations from "./rotation.json"
 
 // 距离刷新地图的时间倒计时
-let countdown = ref()
+const countdown = ref()
+const nowDate = ref()
 /**
  * 每秒计算倒计时
  */
 onBeforeMount(() => {
     setInterval(() => {
         const date = new Date();
+        // 获取当前年
+        const nowYear = date.getFullYear();
+        // 获取当前月
+        const nowMonth = date.getMonth() + 1;
+        // 获取当前日
+        const nowDay = date.getDate();
         // 获取当前小时
         const nowHours = date.getHours();
         // 获取当前分钟
         const nowMinutes = date.getMinutes();
         // 获取当前秒
         const nowSeconds = date.getSeconds();
-
+        nowDate.value = `${nowYear}/${nowMonth}/${nowDay}`;
         // 计算距离第二天凌晨还有多久
         // 计算小时
         const hours = (24 - nowHours).toString().padStart(2, "0");
@@ -24,9 +31,10 @@ onBeforeMount(() => {
         const minutes = (59 - nowMinutes).toString().padStart(2, "0");
         // 计算秒
         const seconds = (59 - nowSeconds).toString().padStart(2, "0");
+        // 设置倒计时时间
         countdown.value = `${hours}:${minutes}:${seconds}`;
         if (countdown.value !== "00:00:00") {
-
+            calculateTodayMap()
         }
     }, 1000);
 })
@@ -58,6 +66,9 @@ onBeforeMount(() => {
 </script>
 
 <template>
+    <p>
+        <el-text>今日日期: {{ nowDate }}</el-text>
+    </p>
     <p>
         <el-text>距离刷新地图还有:</el-text>
         <el-text type="success"> {{ countdown }}</el-text>

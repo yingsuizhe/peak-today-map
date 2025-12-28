@@ -51,7 +51,7 @@ const calculateTodayMap = () => {
     const date = new Date();
     // 计算距离初始时间过去了多久
     const days = Math.floor((date.getTime() - initMap.date.getTime()) / (1000 * 60 * 60 * 24)) + 1;
-    // 过去的天数加上轮转编号取模于21
+    // 过去的天数加上轮转编号取模于21, 计算出今天是第几轮
     const rotationId = (days + initMap.id) % 21
     // 获取数据
     mapInfo.value = rotations[rotationId];
@@ -73,7 +73,7 @@ onBeforeMount(() => {
         <el-text>距离刷新地图还有:</el-text>
         <el-text type="success"> {{ countdown }}</el-text>
     </p>
-    <el-table :data="mapInfo">
+    <el-table :data="mapInfo" border size="large">
         <el-table-column label="关卡" prop="id"></el-table-column>
         <el-table-column label="地形" prop="name"></el-table-column>
         <el-table-column label="备注" prop="remark"></el-table-column>

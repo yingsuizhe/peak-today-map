@@ -52,6 +52,7 @@ const calculateTodayMap = () => {
     // 获取当日时间
     // const date = new Date();
     // 计算距离初始时间过去了多久
+    console.log(queryDate.value)
     const days = Math.floor((queryDate.value.getTime() - initMap.date.getTime()) / (1000 * 60 * 60 * 24)) + 1;
     // 过去的天数加上轮转编号取模于21, 计算出今天是第几轮
     const rotationId = (days + initMap.id) % 21
@@ -65,13 +66,6 @@ onBeforeMount(() => {
     // 获取地图数据
     calculateTodayMap()
 })
-
-const shortcuts = [
-    {
-        text: "今天",
-        value: new Date()
-    }
-]
 </script>
 
 <template>
@@ -85,9 +79,9 @@ const shortcuts = [
         </el-form-item>
         <el-form-item label="选择日期">
             <el-date-picker
+                type="datetime"
                 v-model="queryDate"
                 :clearable="false"
-                :shortcuts="shortcuts"
             />
         </el-form-item>
         <el-form-item>

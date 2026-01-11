@@ -5,6 +5,8 @@ import rotations from "./rotation.json"
 // 距离刷新地图的时间倒计时
 const countdown = ref()
 const nowDate = ref()
+// 查询日期
+const queryDate = ref(new Date())
 /**
  * 每秒计算倒计时
  */
@@ -33,7 +35,7 @@ onBeforeMount(() => {
         const seconds = (59 - nowSeconds).toString().padStart(2, "0");
         // 设置倒计时时间
         countdown.value = `${hours}:${minutes}:${seconds}`;
-        if (countdown.value !== "00:00:00") {
+        if (countdown.value === "00:00:00") {
             calculateTodayMap()
         }
     }, 1000);
@@ -48,9 +50,9 @@ const calculateTodayMap = () => {
     // 初始地图和时间的对应
     const initMap = {"date": new Date("2025/12/17 01:00:00"), "id": 16};
     // 获取当日时间
-    const date = new Date();
+    // const date = new Date();
     // 计算距离初始时间过去了多久
-    const days = Math.floor((date.getTime() - initMap.date.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+    const days = Math.floor((queryDate.value.getTime() - initMap.date.getTime()) / (1000 * 60 * 60 * 24)) + 1;
     // 过去的天数加上轮转编号取模于21, 计算出今天是第几轮
     const rotationId = (days + initMap.id) % 21
     // 获取数据
@@ -63,16 +65,35 @@ onBeforeMount(() => {
     // 获取地图数据
     calculateTodayMap()
 })
+
+const shortcuts = [
+    {
+        text: "今天",
+        value: new Date()
+    }
+]
 </script>
 
 <template>
-    <p>
-        <el-text>今日日期: {{ nowDate }}</el-text>
-    </p>
-    <p>
-        <el-text>距离刷新地图还有:</el-text>
-        <el-text type="success"> {{ countdown }}</el-text>
-    </p>
+    <el-form inline>
+        <el-form-item>
+            <el-text>距离刷新地图还有:</el-text>
+            <el-text type="success"> {{ countdown }}</el-text>
+        </el-form-item>
+        <el-form-item>
+            <el-text>今日日期: {{ nowDate }}</el-text>
+        </el-form-item>
+        <el-form-item label="选择日期">
+            <el-date-picker
+                v-model="queryDate"
+                :clearable="false"
+                :shortcuts="shortcuts"
+            />
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="calculateTodayMap">查询</el-button>
+        </el-form-item>
+    </el-form>
     <el-table :data="mapInfo" border size="large">
         <el-table-column label="关卡" prop="id"></el-table-column>
         <el-table-column label="地形" prop="name"></el-table-column>
